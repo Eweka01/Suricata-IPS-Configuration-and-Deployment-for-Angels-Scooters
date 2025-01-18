@@ -26,8 +26,7 @@ The network setup includes:
   ```bash
   sudo tail -f /var/log/suricata/eve.json
   ```
-  <img width="1728" alt="Screenshot 2025-01-18 at 4 17 16 PM" src="https://github.com/user-attachments/assets/8ce60aa0-66db-47d3-8af2-89d541f4987a" /> <img width="1728" alt="Screenshot 2025-01-18 at 4 38 19 PM" src="https://github.com/user-attachments/assets/c824ec0c-27d0-4842-a99f-b80e5d493708" />
-
+  <img width="1728" alt="Screenshot 2025-01-18 at 4 38 19 PM" src="https://github.com/user-attachments/assets/c824ec0c-27d0-4842-a99f-b80e5d493708" />
 
 - Observed malicious traffic targeting the "Angels & Scooters" website.
 - Example of malicious IPs identified:
@@ -37,6 +36,9 @@ The network setup includes:
 
 ### 2. Creating Custom IPS Rules
 - Wrote custom rules to block identified malicious traffic and common web application attacks (e.g., SQL injection, command injection).
+
+<img width="1644" alt="Screenshot 2025-01-18 at 4 20 43 PM" src="https://github.com/user-attachments/assets/8afde263-926c-4b10-aa75-dfaacf9d40db" />
+  
 - Edited the rules file at `/etc/suricata/rules/suricata.rules`:
   ```bash
   sudo nano /etc/suricata/rules/suricata.rules
@@ -61,6 +63,8 @@ The network setup includes:
 
 ### 3. Testing Rule Syntax
 - Validated the syntax of the rules:
+  <img width="1642" alt="Screenshot 2025-01-18 at 4 25 41 PM" src="https://github.com/user-attachments/assets/6e3e4a25-2cae-43ac-b7dc-3c5fd57a4b03" />
+
   ```bash
   sudo suricata -T -c /etc/suricata/suricata.yaml -v
   ```
